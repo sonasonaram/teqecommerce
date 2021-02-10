@@ -41,7 +41,7 @@ public class UserDAO {
 			session = HibernateConfiguration.getSessionFactory().openSession();
 			transaction = session.beginTransaction();
 			
-			List<Object[]> rows = session.createSQLQuery("SELECT * FROM teq_e_commerce.user WHERE email='" + email + "' AND password='" + pass + "';").list();
+			List<Object[]> rows = session.createSQLQuery("SELECT * FROM teq_e_commerce.User WHERE email='" + email + "' AND password='" + pass + "';").list();
 			if (rows != null && rows.size() >= 1) {
 				User user = new User();
 				user.setId(Integer.parseInt(rows.get(0)[0].toString()));
