@@ -22,7 +22,7 @@ public class HibernateConfiguration {
 			 
 			Properties hibernateProperties = new Properties();
 			hibernateProperties.put(Environment.DRIVER, "com.mysql.cj.jdbc.Driver");
-			hibernateProperties.put(Environment.URL, "jdbc:mysql://localhost/teq_e_commerce");
+			hibernateProperties.put(Environment.URL, "jdbc:mysql://db_c/teq_e_commerce");
 			hibernateProperties.put(Environment.USER, "root");
 			hibernateProperties.put(Environment.PASS, "root");
 			hibernateProperties.put(Environment.DIALECT, "org.hibernate.dialect.MySQL5Dialect");
