@@ -42,7 +42,7 @@ public class ProductDAO {
 			session = HibernateConfiguration.getSessionFactory().openSession();
 			transaction = session.beginTransaction();
 			
-			List<Object[]> rows = session.createSQLQuery("SELECT * FROM teq_e_commerce.product;").list();
+			List<Object[]> rows = session.createSQLQuery("SELECT * FROM teq_e_commerce.Product;").list();
 			List<Product> products = new ArrayList<Product>();
 			for (Object[] row : rows) {
 				Product product = new Product();
