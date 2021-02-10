@@ -43,7 +43,7 @@ public class CartDAO {
 			session = HibernateConfiguration.getSessionFactory().openSession();
 			transaction = session.beginTransaction();
 			
-			List<Object[]> rows = session.createSQLQuery("SELECT * FROM teq_e_commerce.cart WHERE userid='" + userId + "';").list();
+			List<Object[]> rows = session.createSQLQuery("SELECT * FROM teq_e_commerce.Cart WHERE userid='" + userId + "';").list();
 			List<Cart> cartItems = new ArrayList<Cart>();
 			for (Object[] row : rows) {
 				Cart cartItem = new Cart();
